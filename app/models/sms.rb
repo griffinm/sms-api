@@ -14,10 +14,10 @@ class Sms < ActiveRecord::Base
     case self.body.downcase
     when 'shuttle'
       reply_text = Shuttle.get_eta
-    when "help"
-      reply_text = "Commands:%0ashuttle"
+    when "commands"
+      reply_text = "Commands:\nshuttle"
     else 
-      reply_text = "Unknown command. Type \"help\" for a list of commands"
+      reply_text = "Unknown command. Type \"commands\" for a list of commands"
     end
 
     twiml = Twilio::TwiML::Response.new do |r|

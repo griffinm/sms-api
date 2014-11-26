@@ -14,7 +14,7 @@ class Shuttle
     alewife_string = arrival_time_string(alewife_eta_seconds)
     fawcett_string = arrival_time_string(fawcett_eta_seconds)
 
-    return "Alewife - #{alewife_string}%0aFawcett - #{fawcett_string}"
+    return "Alewife - #{alewife_string}\nFawcett - #{fawcett_string}"
   end
 
   private
