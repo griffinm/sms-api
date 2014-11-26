@@ -3,8 +3,6 @@ class Sms < ActiveRecord::Base
 
 	validate :from_correct_number
 
-  CORRECT_RECEIVED_FROM_NUMBER = '+16176520496'
-
   @twilio_client = client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
 
   # process will parse a message and generates reply XML
@@ -29,6 +27,8 @@ class Sms < ActiveRecord::Base
 
   private
     def from_correct_number
-      errors.add(:from, 'Invalid number') unless CORRECT_RECEIVED_FROM_NUMBER == self.from
+      unless AuthorizedNumber.where(phone_number: self.from).exists?
+        errors.add(:from, 'Invalid number')
+      end
     end
 end

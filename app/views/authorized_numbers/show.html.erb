@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @authorized_number.phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_authorized_number_path(@authorized_number) %> |
+<%= link_to 'Back', authorized_numbers_path %>

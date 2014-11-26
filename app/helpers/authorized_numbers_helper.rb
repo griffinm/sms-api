@@ -1,0 +1,2 @@
+module AuthorizedNumbersHelper
+end

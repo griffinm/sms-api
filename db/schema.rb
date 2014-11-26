@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126222953) do
+ActiveRecord::Schema.define(version: 20141126231203) do
+
+  create_table "authorized_numbers", force: true do |t|
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sms", force: true do |t|
     t.string   "sms_message_sid"
