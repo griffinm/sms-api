@@ -20,7 +20,7 @@ class Shuttle
   private
 
     def self.arrival_time_string(arrival_time_in_seconds)
-      arrival_time = Time.now + arrival_time_in_seconds.seconds
+      arrival_time = Time.zone.now + arrival_time_in_seconds.seconds
       arrival_time = arrival_time.strftime('%I:%M')
       eta_minutes = arrival_time_in_seconds / 60
 
