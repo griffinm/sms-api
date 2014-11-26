@@ -9,7 +9,7 @@ set :keep_releases, 10
 set :user, 'ubuntu'
 set :stages, ['production']
 
-set :repo_url, 'git@github.com:griffinm/rails-test.git'
+set :repo_url, 'git@github.com:griffinm/sms-api.git'
 set :branch, 'master'
 
 set :ssh_options, {
