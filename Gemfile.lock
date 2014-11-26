@@ -28,6 +28,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.9)
+    bootstrap-sass (3.3.1.0)
+      sass (~> 3.2)
     builder (3.2.2)
     capistrano (3.1.0)
       i18n
@@ -48,6 +51,13 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colorize (0.7.3)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -71,6 +81,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
+    orm_adapter (0.5.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -96,6 +107,8 @@ GEM
     rake (10.4.0)
     rdoc (4.1.2)
       json (~> 1.4)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -150,15 +163,19 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.1)
   capistrano (~> 3.1.0)
   capistrano-bundler
   capistrano-rails
   coffee-rails (~> 4.0.0)
+  devise
   jbuilder (~> 2.0)
   jquery-rails
   mysql2

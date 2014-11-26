@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 gem 'twilio-ruby', '~> 3.12'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'devise'
 
 gem 'mysql2'
 # Use SCSS for stylesheets
