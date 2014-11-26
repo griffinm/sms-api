@@ -10,6 +10,7 @@ set :user, 'ubuntu'
 set :stages, ['production']
 
 set :repo_url, 'git@github.com:griffinm/rails-test.git'
+set :branch, 'master'
 
 set :ssh_options, {
   keys: %w(~/.ssh/GRIFFINET-PK1.pem),
