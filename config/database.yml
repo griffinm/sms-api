@@ -4,23 +4,19 @@ default: &default
   encoding: utf8
   pool: 5
   timeout: 5000
+  username: root
+  password: <%= ENV["MYSQL_PASSWORD"] %>
+  host: localhost
+  port: 3306
 
 development:
   <<: *default
-  username: root
-  password: <%= ENV["MYSQL_PASSWORD"] %>
   database: sms-api-dev
-  host: localhost
-  port: 3306
-
 
 test:
   <<: *default
-  username: root
-  password: <%= ENV["MYSQL_PASSWORD"] %>
   database: sms-api-test
-  host: localhost
-  port: 3306
 
 production:
   <<: *default
+  database: sms-api-prod
