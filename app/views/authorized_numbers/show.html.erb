@@ -1,9 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-12">
+    <ol class="breadcrumb">
+      <li><%= link_to 'Authorized Numbers', authorized_numbers_path %></li>
+      <li class="active">View Number</li>
+    </ol>
+  </div>
+</div>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @authorized_number.phone_number %>
-</p>
+<div class="row">
+  <div class="col-sm-12">
+    <h2>View Number: <%= @authorized_number.phone_number %></h2>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_authorized_number_path(@authorized_number) %> |
-<%= link_to 'Back', authorized_numbers_path %>
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Edit', edit_authorized_number_path(@authorized_number), class: 'btn btn-default' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h2>Number History</h2>
+  </div>
+</div>
+
+<div clas="row">
+  <div class="col-sm-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Message Body</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @history.each do |message| %>
+        <tr>
+          <td><%= message.created_at %></td>
+          <td><%= message.body %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

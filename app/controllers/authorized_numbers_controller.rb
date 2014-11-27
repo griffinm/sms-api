@@ -9,6 +9,7 @@ class AuthorizedNumbersController < AdminController
   end
 
   def show
+    @history = @authorized_number.messages
     respond_with(@authorized_number)
   end
 
