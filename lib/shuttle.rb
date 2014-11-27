@@ -8,6 +8,11 @@ class Shuttle
 
   def self.get_eta
     stop_json = get_stop_data
+
+    if get_stop_data.count == 0
+      return "Shuttle not on route"
+    end
+
     alewife_eta_seconds = get_eta_for_stop_id(stop_json, ALEWIFE_STOP_ID)
     fawcett_eta_seconds = get_eta_for_stop_id(stop_json, FAWCETT_STOP_ID)
 
