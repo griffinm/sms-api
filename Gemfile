@@ -6,6 +6,7 @@ gem 'rails', '4.1.6'
 gem 'twilio-ruby', '~> 3.12'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'devise'
+gem 'newrelic_rpm'
 
 gem 'mysql2'
 # Use SCSS for stylesheets
