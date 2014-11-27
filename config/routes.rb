@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root :to => 'admin_home#index'
+  root :to => 'authorized_numbers#index'
 
   resources :health, only: [:index]
 
