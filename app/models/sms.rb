@@ -12,8 +12,10 @@ class Sms < ActiveRecord::Base
     case self.body.downcase
     when 'shuttle'
       reply_text = Shuttle.get_eta
+    when 'dinner'
+      reply_text = Dinner.choose
     when "commands"
-      reply_text = "Commands:\nshuttle"
+      reply_text = "Commands:\nshuttle\ndinner"
     else 
       reply_text = "Unknown command. Type \"commands\" for a list of commands"
     end
