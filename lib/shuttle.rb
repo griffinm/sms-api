@@ -6,7 +6,15 @@ class Shuttle
   ALEWIFE_STOP_ID = 16
   ROUTE_ID = 2
 
-  def self.get_eta
+  def self.command_name
+    'shuttle'
+  end
+
+  def self.matcher
+    /^shuttle$/
+  end
+
+  def self.response(params={})
     stop_json = get_stop_data
 
     if get_stop_data.count == 0

@@ -24,7 +24,15 @@ class Dinner
     'Meat Loaf'
   ]
 
-  def self.choose
+  def self.command_name
+    'dinner'
+  end
+
+  def self.matcher
+    /^dinner$/
+  end
+
+  def self.response(params={})
     @options[rand(@options.length)]
   end
 

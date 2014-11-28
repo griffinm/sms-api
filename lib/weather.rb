@@ -9,8 +9,15 @@ class Weather
 
   FORECAST_URL = URI.parse("https://api.forecast.io/forecast/#{API_KEY}/#{DEFAULT_LAT},#{DEFAULT_LON}")
 
+  def self.command_name
+    'weather'
+  end
 
-  def self.get(params={})
+  def self.matcher
+    /^(weather|forecast)$/
+  end
+
+  def self.response(params={})
     return formatted_forecast
   end
 

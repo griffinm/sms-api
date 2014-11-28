@@ -5,7 +5,15 @@ class Joke
 
   JOKE_URL = URI.parse('http://www.reddit.com/r/jokes.json')
 
-  def self.get(params={})
+  def self.command_name
+    'joke'
+  end
+
+  def self.matcher
+    /^joke$/
+  end
+
+  def self.response(params={})
     joke_json = get_joke_json
     joke = random_joke_node(joke_json)
 
