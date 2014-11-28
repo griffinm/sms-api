@@ -1,4 +1,10 @@
-<h1>Authorized Numbers</h1>
+<div class="row">
+  <div class="col-sm-12">
+    <ol class="breadcrumb">
+      <li class="active">Authorized Numbers</li>
+    </ol>
+  </div>
+</div>
 
 <div class="col-sm-12">
   <%= link_to 'New Authorized number', new_authorized_number_path, class: 'btn btn-default' %>
@@ -18,9 +24,9 @@
         <tr>
           <td><%= authorized_number.phone_number %>
           <td>
-            <%= link_to 'Show', authorized_number %>
-            <%= link_to 'Edit', edit_authorized_number_path(authorized_number) %>
-            <%= link_to 'Destroy', authorized_number, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Show', authorized_number, class: 'btn btn-default' %>
+            <%= link_to 'Edit', edit_authorized_number_path(authorized_number), class: 'btn btn-default' %>
+            <%= link_to 'Destroy', authorized_number, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
           </td>
         </tr>
       <% end %>
