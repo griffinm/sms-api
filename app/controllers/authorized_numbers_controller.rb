@@ -43,6 +43,6 @@ class AuthorizedNumbersController < AdminController
     end
 
     def authorized_number_params
-      params.require(:authorized_number).permit(:phone_number)
+      params.require(:authorized_number).permit(:phone_number, :note)
     end
 end

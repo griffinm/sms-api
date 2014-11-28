@@ -5,5 +5,6 @@ class AuthorizedNumber < ActiveRecord::Base
     primary_key: :phone_number
 
   validates :phone_number,
-    uniqueness: true
+    uniqueness: true,
+    presence: true
 end

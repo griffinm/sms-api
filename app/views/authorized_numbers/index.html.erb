@@ -15,6 +15,7 @@
     <thead>
       <tr>
         <th>Phone number</th>
+        <th>Note</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -22,7 +23,8 @@
     <tbody>
       <% @authorized_numbers.each do |authorized_number| %>
         <tr>
-          <td><%= authorized_number.phone_number %>
+          <td><%= authorized_number.phone_number %></td>
+          <td><%= authorized_number.note %></td>
           <td>
             <%= link_to 'Show', authorized_number, class: 'btn btn-default' %>
             <%= link_to 'Edit', edit_authorized_number_path(authorized_number), class: 'btn btn-default' %>
