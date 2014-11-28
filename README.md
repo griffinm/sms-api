@@ -12,7 +12,10 @@ class NewModule
 
   end
 
-  # This is the text that will be sent in reply to the incoming SMS if the regular expression provided in the matcher class matches the incoming SMS. This returns a basic string that is automatically converted to Twilio XML
+  # This is the text that will be sent in reply to the incoming SMS if the
+  # regular expression provided in the matcher class matches the incoming 
+  # SMS. This returns a basic string that is automatically converted to
+  # Twilio XML
   def self.response
 
   end
