@@ -13,9 +13,12 @@ class SmsResponse
     Commands
   ]
 
-  def self.response(message_body)
+  def self.response(sms)
     twiml = Twilio::TwiML::Response.new do |r|
-      r.Message self.response_text(message_body)
+      text = self.response_text(sms.body)
+      r.Message text
+
+      sms.update_attributes(response: text)
     end
 
     return twiml.text

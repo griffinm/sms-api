@@ -9,7 +9,7 @@ class AuthorizedNumbersController < AdminController
   end
 
   def show
-    @history = @authorized_number.messages
+    @history = @authorized_number.messages.order(created_at: :desc)
     respond_with(@authorized_number)
   end
 

@@ -32,6 +32,7 @@
         <tr>
           <th>Date</th>
           <th>Message Body</th>
+          <th>Response</th>
         </tr>
       </thead>
       <tbody>
@@ -39,6 +40,7 @@
         <tr>
           <td><%= message.created_at %></td>
           <td><%= message.body %></td>
+          <td><%= raw message.html_response %></td>
         </tr>
       <% end %>
       </tbody>

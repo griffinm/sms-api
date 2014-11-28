@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128211851) do
+ActiveRecord::Schema.define(version: 20141128212617) do
 
   create_table "authorized_numbers", force: true do |t|
     t.string   "phone_number"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20141128211851) do
     t.string   "api_version"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "response"
   end
 
   create_table "users", force: true do |t|
