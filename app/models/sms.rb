@@ -18,8 +18,10 @@ class Sms < ActiveRecord::Base
       reply_text = Coin.flip
     when 'weather'
       reply_text = Weather.get
+    when 'joke'
+      reply_text = Joke.get
     when "commands"
-      reply_text = "Commands:\nshuttle\ndinner\nflip\nweather"
+      reply_text = "Commands:\nshuttle\ndinner\nflip\nweather\njoke"
     else 
       reply_text = "Unknown command. Type \"commands\" for a list of commands"
     end
