@@ -10,7 +10,7 @@ set :user, 'ubuntu'
 set :stages, ['production']
 
 set :repo_url, 'git@github.com:griffinm/sms-api.git'
-set :branch, 'master'
+set :branch, 'release'
 
 set :ssh_options, {
   keys: %w(~/.ssh/GRIFFINET-PK1.pem),
