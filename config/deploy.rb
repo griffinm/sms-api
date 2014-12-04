@@ -17,5 +17,3 @@ set :ssh_options, {
 }
 
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-after "deploy:update_code", "deploy:migrate"
