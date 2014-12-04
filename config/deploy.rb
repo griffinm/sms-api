@@ -16,13 +16,4 @@ set :ssh_options, {
   keys: %w(~/.ssh/GRIFFINET-PK1.pem),
 }
 
-namespace :deploy do
-  desc 'Restart Apache'
-  task :restart do
-    on 'ubuntu@web1' do
-      execute 'sudo service apache2 restart'
-    end
-  end
-  after :publishing, :restart
-
-end
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
